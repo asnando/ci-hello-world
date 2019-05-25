@@ -2,13 +2,17 @@ const express = require('express');
 
 // eslint-disable-next-line prefer-destructuring
 const log = console.log;
-const server = express();
+const app = express();
 const PORT = 3000;
 
-server
+app
   .get('/status', (req, res) => {
     res.json({
       status: 'online',
     });
-  })
-  .listen(process.env.PORT || PORT);
+  });
+
+
+const server = app.listen(process.env.PORT || PORT);
+
+module.exports = server;
