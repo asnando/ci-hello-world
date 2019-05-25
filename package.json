@@ -4,7 +4,8 @@
   "description": "Test Continuous Integration and Continuous Deploy using Travis CI and Heroku.",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
