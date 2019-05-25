@@ -11,6 +11,4 @@ server
       status: 'online',
     });
   })
-  .listen(PORT, () => {
-    log(`Server using ${PORT} port`);
-  });
+  .listen(process.env.PORT || PORT);
