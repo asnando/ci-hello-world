@@ -1,6 +1,13 @@
 language: node_js
 node_js:
-  - "stable"
+- stable
 script:
-  - npm run lint
-  - npm test
+- npm run lint
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: VWwpQYa9m8wuC9tccQ9t1GR3KZ0eSPvBqbUqZmAdT5Ch2LjRpzx9zqQOl7tpC41mwdnxStCnikpD9lEhTBwGUfFlvFTFL1zyg1aRrGYvX4VJknYDUJRwlWRPfLQZI2YEzjESQHKOC2ozCP8TmO+kS3GqDZ0naZ//I6jMIQoJRZc+bBnTPJD4FN7rdnNfenPlsHSPCYBDv3LAy+KgXmCR+ADoAnJPp8K+CFPxPOCqEPEHzbOgBEUw8h95YwAsZC5ZpY5qlRsKyalTOhkZ6jbV2F2+NAnp0VfzVfZBJ0C+s50BV2PXfuy7CqKTlHwD3zRxB5Da1I6sRNI30Tva1ltLSah1m7BKggtsG6dQaYZ7mAend3Woq9eAsqPMQrEUgZ3zCpQPL4Uvru1oRC4bWa3QMqFlpFlMr2Z460f3/n/Xz9B21DN1MCskTwInG0INF+vktaBaoNrv2aNAwS3cwyUE1/NOMcGr339FI8pGHceqj79RLQCuLa8BrFqZ7p4MJFVxwSNtwLCoAPVv2qrOMv2G1KN8PCzoLpYRMOL6S5SoSRwbiSKbh0KT3QQKnuVeTzrQr9PFoumzxiHYAx7/o2PQ7m07IKlWGuL8JeeENwy69jo2IcrvKLs1YivMIawsY6pxqlir+JsEtdVXGoaF5w5BLqi3sIpxtYJZvZadfB5V+EM=
+  app: heroku-ci-hello-world
+  on:
+    repo: ffrm/ci-hello-world
