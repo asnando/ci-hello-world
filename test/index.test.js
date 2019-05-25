@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
 const { expect } = require('chai');
-// const axios = require('axios');
 const fetch = require('node-fetch');
 const server = require('../src');
 
